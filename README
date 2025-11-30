@@ -17,79 +17,81 @@ REST API untuk sistem manajemen internal perusahaan **SinarDigital**, meliputi a
 ## 📚 API Endpoints
 
 ### 🔐 Authentication
-| Method | Endpoint | Deskripsi |
-|--------|----------|-----------|
-| **POST** | `/api/login` | Login user dan generate token |
-| **POST** | `/api/logout` | Logout user dan revoke token |
+
+| Method | Endpoint      | Deskripsi                                 |
+|--------|---------------|--------------------------------------------|
+| POST   | `/api/login`  | Login user dan generate token             |
+| POST   | `/api/logout` | Logout user dan revoke token              |
 
 ---
 
 ### 👤 Users
-| Method | Endpoint | Deskripsi |
-|--------|----------|-----------|
-| **GET** | `/api/users` | Get semua users *(C-Level only)* |
-| **GET** | `/api/users/me` | Get profile user yang sedang login |
-| **PUT** | `/api/users/:id/status` | Update status aktif/nonaktif user |
+
+| Method | Endpoint                  | Deskripsi                              |
+|--------|---------------------------|------------------------------------------|
+| GET    | `/api/users`             | Get semua users (C-Level only)          |
+| GET    | `/api/users/me`          | Get profile user login                  |
+| PUT    | `/api/users/:id/status`  | Update status aktif/nonaktif user       |
 
 ---
 
 ### 📝 Tasks
-| Method | Endpoint | Deskripsi |
-|--------|----------|-----------|
-| **GET** | `/api/tasks` | Get semua tasks |
-| **POST** | `/api/tasks` | Buat task baru |
-| **PUT** | `/api/tasks/:id` | Update task (status/progress) |
+
+| Method | Endpoint          | Deskripsi                        |
+|--------|-------------------|----------------------------------|
+| GET    | `/api/tasks`      | Get semua tasks                  |
+| POST   | `/api/tasks`      | Buat task baru                   |
+| PUT    | `/api/tasks/:id`  | Update task                      |
 
 ---
 
 ### 💼 Jobs
-| Method | Endpoint | Deskripsi |
-|--------|----------|-----------|
-| **GET** | `/api/jobs` | Get semua job openings *(public)* |
-| **POST** | `/api/jobs` | Buat job baru *(HRD only)* |
+
+| Method | Endpoint      | Deskripsi                          |
+|--------|---------------|--------------------------------------|
+| GET    | `/api/jobs`   | Get semua jobs (public)             |
+| POST   | `/api/jobs`   | Buat job baru (HRD only)            |
 
 ---
 
 ### 👥 Job Applicants
-| Method | Endpoint | Deskripsi |
-|--------|----------|-----------|
-| **GET** | `/api/job-seekers` | Get semua pelamar *(HRD only)* |
-| **GET** | `/api/jobs/:jobId/applicants` | Get pelamar berdasarkan job *(HRD only)* |
-| **POST** | `/api/job-seekers` | Kirim lamaran untuk job *(public)* |
+
+| Method | Endpoint                           | Deskripsi                         |
+|--------|------------------------------------|-----------------------------------|
+| GET    | `/api/job-seekers`                 | Get semua pelamar (HRD only)      |
+| GET    | `/api/jobs/:jobId/applicants`      | Get pelamar by job (HRD only)     |
+| POST   | `/api/job-seekers`                 | Apply untuk job (public)          |
 
 ---
 
 ### 📊 Reports
-| Method | Endpoint | Deskripsi |
-|--------|----------|-----------|
-| **GET** | `/api/reports/dashboard` | Get data dashboard *(C-Level & HRD)* |
+
+| Method | Endpoint                   | Deskripsi                              |
+|--------|----------------------------|------------------------------------------|
+| GET    | `/api/reports/dashboard`  | Get dashboard data (C-Level & HRD)      |
 
 ---
 
 ## 🛡 Authorization
 
 ### **C-Level**
-- Full access pada user management  
-- Melihat seluruh laporan  
-- Mengelola keputusan eksekutif
+- Manage users & company  
+- View reports & approve budgets  
 
 ### **HRD**
-- Mengelola job & pelamar  
-- Melihat laporan internal
+- Manage jobs & review applicants  
+- View reports  
 
 ### **Staff**
-- Mengelola task yang di-assign  
-- Akses terbatas pada data perusahaan
+- Hanya mengerjakan task assigned ke mereka  
 
 ---
 
 ## 📁 Important Files
 
-| File | Deskripsi |
-|------|-----------|
-| `TPM_BE_MiniProject1.postman_collection.json` | Postman collection untuk testing API |
-| `data.json` | Database file berbasis JSON |
-| `ERD.png` | Entity Relationship Diagram |
-
----
+| File                                           | Deskripsi                               |
+|------------------------------------------------|-------------------------------------------|
+| `TPM_BE_MiniProject1.postman_collection.json` | Postman collection untuk testing API       |
+| `data.json`                                   | Database file (JSON-based)                |
+| `ERD.png`                                     | Entity Relationship Diagram                |
 
