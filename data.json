@@ -1,0 +1,145 @@
+{
+  "roles": [
+    {
+      "id": 1,
+      "name": "HRD",
+      "permissions": [
+        "manage_jobs",
+        "review_applicants",
+        "view_reports"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Staff",
+      "permissions": [
+        "do_tasks"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "C-Level",
+      "permissions": [
+        "manage_company",
+        "manage_users",
+        "view_reports",
+        "approve_budgets"
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Kreativa Inovasi",
+      "email": "kreativa@mail.com",
+      "password": "admin",
+      "role_id": 3,
+      "token": "token-1-1764504377147"
+    },
+    {
+      "id": 2,
+      "name": "Budi",
+      "email": "budi@mail.com",
+      "password": "budi",
+      "role_id": 1,
+      "token": "token-2-1764503538628"
+    },
+    {
+      "id": 3,
+      "name": "Citra",
+      "email": "citra@mail.com",
+      "password": "citra",
+      "role_id": 2,
+      "status": "online",
+      "token": "token-3-1764503631342"
+    },
+    {
+      "id": 4,
+      "name": "Dewi",
+      "email": "dewi@mail.com",
+      "password": "dewi",
+      "role_id": 2,
+      "status": "offline"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Review Budget",
+      "description": "Cek pengeluaran Q4",
+      "status": "pending",
+      "assigned_to": 3,
+      "created_by": 1,
+      "due_date": "2025-12-01"
+    },
+    {
+      "id": 2,
+      "title": "Update Website",
+      "description": "Perbarui landing page",
+      "status": "in_progress",
+      "assigned_to": 4,
+      "created_by": 1,
+      "due_date": "2025-12-05"
+    },
+    {
+      "id": 3,
+      "title": "Prepare Report",
+      "description": "Laporan mingguan divisi",
+      "status": "completed",
+      "assigned_to": 3,
+      "created_by": 1,
+      "due_date": "2025-11-29"
+    },
+    {
+      "id": 4,
+      "title": "Bikin desain 100 poster",
+      "description": "ralat tahun depan ya",
+      "status": "pending",
+      "assigned_to": 2,
+      "created_by": 1,
+      "due_date": "2026-11-32"
+    }
+  ],
+  "jobs": [
+    {
+      "id": 1,
+      "title": "Frontend Developer",
+      "description": "Membangun UI modern untuk aplikasi klien",
+      "status": "open",
+      "created_by": 1
+    },
+    {
+      "id": 2,
+      "title": "Graphic Designer",
+      "description": "Membuat desain poster dan aset media",
+      "status": "open",
+      "created_by": 2
+    }
+  ],
+  "job_seekers": [
+    {
+      "id": 1,
+      "name": "Riko",
+      "email": "riko@mail.com",
+      "skills": "JavaScript, React, CSS",
+      "experience_years": 2,
+      "applied_job_id": 1
+    },
+    {
+      "id": 2,
+      "name": "Lina",
+      "email": "lina@mail.com",
+      "skills": "Figma, Photoshop",
+      "experience_years": 1,
+      "applied_job_id": 2
+    },
+    {
+      "id": 3,
+      "name": "Sherlysad Sigma",
+      "email": "shersigma@mail.com",
+      "skills": "Melukis Tingkat Dewa",
+      "experience_years": 67,
+      "applied_job_id": 2
+    }
+  ]
+}
