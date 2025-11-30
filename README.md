@@ -76,7 +76,7 @@ REST API untuk sistem manajemen internal perusahaan **SinarDigital**, meliputi a
 
 ### **C-Level**
 - Manage users & company  
-- View reports & approve budgets  
+- View reports 
 
 ### **HRD**
 - Manage jobs & review applicants  
